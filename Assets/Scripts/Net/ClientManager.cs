@@ -7,9 +7,12 @@ using Common;
 
 public class ClientManager : BaseManager  {
 
+    public ClientManager(GameFacade facade) : base(facade) { }
+
     private const string IP = "127.0.0.1";
     private const int PORT = 6688;
 
+    private Message message = new Message();
     private Socket clientSocket;
 
     public override void OnInit()
@@ -19,6 +22,7 @@ public class ClientManager : BaseManager  {
         try
         {
             clientSocket.Connect(IP, PORT);
+            Start();
         }
         catch(Exception ex)
         {
@@ -37,6 +41,30 @@ public class ClientManager : BaseManager  {
         {
             Debug.Log("无法关闭客户端连接");
         }
+    }
+
+    private void Start()
+    {
+        clientSocket.BeginReceive(message.Data,message.StartIndex,message.RemainSize,SocketFlags.None,ReceiveCallBack,null);
+    }
+
+    private void ReceiveCallBack(IAsyncResult ar)
+    {
+        try
+        {
+            int count = clientSocket.EndReceive(ar);
+            message.ReadMessage(count, OnProcessDataCallBack);
+            Start();
+        }
+        catch(Exception ex)
+        {
+            Debug.Log(ex);
+        }
+    }
+
+    private void OnProcessDataCallBack(RequestCode requestCode,string data)
+    {
+        facade.HandleResponse(requestCode, data);
     }
 
     public void SendRequest(RequestCode requestCode,ActionCode actionCode,string data)

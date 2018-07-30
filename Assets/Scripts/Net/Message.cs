@@ -28,7 +28,7 @@ public class Message  {
     }
 
 
-    public void ReadMessage(int newDataAmount, Action<RequestCode, ActionCode, string> processDataCallBack)
+    public void ReadMessage(int newDataAmount, Action<RequestCode , string> processDataCallBack)
     {
         startIndex += newDataAmount;
         while (true)
@@ -41,10 +41,9 @@ public class Message  {
             if ((startIndex - 4) >= count)//如果当前消息是完整的
             {
                 RequestCode requestCode = (RequestCode)BitConverter.ToInt32(data, 4);//请求协议
-                ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 8);
-                string s = Encoding.UTF8.GetString(data, 12, count - 8);
+                string s = Encoding.UTF8.GetString(data, 8, count - 4);
                 Console.WriteLine("解析数据：" + s);
-                processDataCallBack(requestCode, actionCode, s);
+                processDataCallBack(requestCode, s);
                 Array.Copy(data, count + 4, data, 0, startIndex - count - 4);
                 startIndex -= (count + 4);
             }

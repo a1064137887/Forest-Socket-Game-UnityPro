@@ -1,8 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Common;
 
 public class GameFacade : MonoBehaviour {
+
+    private static GameFacade _instance;
+    public static GameFacade instance
+    {
+        get { return _instance; }
+    }
 
     private UIManager uiManager;
     private AudioManager audioManager;
@@ -11,22 +18,33 @@ public class GameFacade : MonoBehaviour {
     private PlayerManager playerManager;
     private ClientManager clientManager;
 
+    void Awake()
+    {
+        if(_instance == null)
+            _instance = this;
+        else
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+    }
+
 	void Start () {
         InitManager();
 	}
 	
 	void Update () {
-		
+		 
 	}
 
     private void InitManager()
     {
-        uiManager = new UIManager();
-        audioManager = new AudioManager();
-        cameraManager = new CameraManager();
-        requestManager = new RequestManager();
-        playerManager = new PlayerManager();
-        clientManager = new ClientManager();
+        uiManager = new UIManager(this);
+        audioManager = new AudioManager(this);
+        cameraManager = new CameraManager(this);
+        requestManager = new RequestManager(this);
+        playerManager = new PlayerManager(this);
+        clientManager = new ClientManager(this);
 
         uiManager.OnInit();
         audioManager.OnInit();
@@ -51,5 +69,20 @@ public class GameFacade : MonoBehaviour {
         DestroyManager();
     }
 
+    //使用中介的方法 ，调用RequestManager类中的方法，管理Request
+    public void AddRequest(RequestCode requestCode, BaseRequest baseRequest)
+    {
+        requestManager.AddRequest(requestCode, baseRequest);
+    }
+    public void RemoveRequest(RequestCode requestCode)
+    {
+        requestManager.RemoveRequest(requestCode);
+    }
+    //========================================
+
+    public void HandleResponse(RequestCode requestCode,string data)
+    {
+        requestManager.HandleResponse(requestCode, data);
+    }
 
 }

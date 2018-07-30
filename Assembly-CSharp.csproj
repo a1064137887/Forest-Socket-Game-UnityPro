@@ -98,6 +98,7 @@
      <Compile Include="Assets\Scripts\Managers\RequestManager.cs" />
      <Compile Include="Assets\Scripts\Net\ClientManager.cs" />
      <Compile Include="Assets\Scripts\Net\Message.cs" />
+     <Compile Include="Assets\Scripts\Request\BaseRequest.cs" />
      <Compile Include="Assets\UIFramework\Base\BasePanel.cs" />
      <Compile Include="Assets\UIFramework\Extension\DictionaryExtension.cs" />
      <Compile Include="Assets\UIFramework\Manager\GameRoot.cs" />
@@ -256,6 +257,9 @@
  <Reference Include="DOTweenProEditor">
  <HintPath>D:/UnityProject/ForestSocketGame/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
+ <Reference Include="Common">
+ <HintPath>D:/UnityProject/ForestSocketGame/Assets/Plugins/Common.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -276,9 +280,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Common">
- <HintPath>D:/UnityProject/ForestSocketGame/Assets/Plugins/Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
