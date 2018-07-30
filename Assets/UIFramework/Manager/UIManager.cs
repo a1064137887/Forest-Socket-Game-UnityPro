@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class UIManager {
+public class UIManager : BaseManager {
 
     /// 
     /// 单例模式的核心
@@ -40,7 +40,7 @@ public class UIManager {
     private Dictionary<UIPanelType, BasePanel> panelDict;//保存所有实例化面板的游戏物体身上的BasePanel组件
     private Stack<BasePanel> panelStack;
 
-    private UIManager()
+    public UIManager()
     {
         ParseUIPanelTypeJson();
     }
