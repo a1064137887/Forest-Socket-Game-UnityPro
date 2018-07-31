@@ -85,4 +85,9 @@ public class GameFacade : MonoBehaviour {
         requestManager.HandleResponse(requestCode, data);
     }
 
+    public void ShowMessage(string message)
+    {
+        uiManager.ShowMessage(message);
+    }
+
 }

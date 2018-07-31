@@ -24,6 +24,13 @@ public class UIManager : BaseManager {
     //    }
     //}
 
+    public override void OnInit()
+    {
+        base.OnInit();
+        PushPanel(UIPanelType.Message);
+        PushPanel(UIPanelType.Start);
+    }
+
     public UIManager(GameFacade facade) : base(facade) 
     {
         ParseUIPanelTypeJson();
@@ -45,7 +52,11 @@ public class UIManager : BaseManager {
     private Dictionary<UIPanelType, BasePanel> panelDict;//保存所有实例化面板的游戏物体身上的BasePanel组件
     private Stack<BasePanel> panelStack;
 
-
+    private MessagePanel messagePanel;//方便其他面板调用显示信息面板
+    public void InjectMessagePanel(MessagePanel messagePanel)
+    {
+        this.messagePanel = messagePanel;
+    }
 
     /// <summary>
     /// 把某个页面入栈，  把某个页面显示在界面上
@@ -110,6 +121,7 @@ public class UIManager : BaseManager {
             string path = panelPathDict.TryGet(panelType);
             GameObject instPanel = GameObject.Instantiate(Resources.Load(path)) as GameObject;
             instPanel.transform.SetParent(CanvasTransform,false);
+            instPanel.GetComponent<BasePanel>().uiManager = this;
             panelDict.Add(panelType, instPanel.GetComponent<BasePanel>());
             return instPanel.GetComponent<BasePanel>();
         }
@@ -140,13 +152,23 @@ public class UIManager : BaseManager {
         }
     }
 
+    public void ShowMessage(string message)
+    {
+        if(messagePanel == null)
+        {
+            Debug.LogWarning("messagePanel为空");
+            return;
+        }
+        messagePanel.ShowMessage(message);
+    }
+
     /// <summary>
     /// just for test
     /// </summary>
-    public void Test()
-    {
-        string path ;
-        panelPathDict.TryGetValue(UIPanelType.Knapsack,out path);
-        Debug.Log(path);
-    }
+    //public void Test()
+    //{
+    //    string path ;
+    //    panelPathDict.TryGetValue(UIPanelType.Knapsack,out path);
+    //    Debug.Log(path);
+    //}
 }

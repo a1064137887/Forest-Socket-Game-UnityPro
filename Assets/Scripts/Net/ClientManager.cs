@@ -26,7 +26,7 @@ public class ClientManager : BaseManager  {
         }
         catch(Exception ex)
         {
-            Debug.Log("无法连接服务器" + ex);
+            Debug.LogWarning("无法连接服务器" + ex);
         }
     }
 
