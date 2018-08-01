@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114406707270029444}
   - component: {fileID: 114372005436037520}
   m_Layer: 5
-  m_Name: LoginBtn
+  m_Name: StartBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903057618916fc14fa5db792a587cb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBtn: {fileID: 114372005436037520}
+  exitBtn: {fileID: 114963338735568668}
 --- !u!114 &114945866033579626
 MonoBehaviour:
   m_ObjectHideFlags: 1

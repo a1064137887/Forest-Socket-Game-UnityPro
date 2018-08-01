@@ -2,15 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class StartPanel : BasePanel {
 
-    public Button button;
+    public Button startBtn;
+    public Button exitBtn;
+
+    private float tweenTime = 0.3f;
+
     public override void OnEnter()
     {
         base.OnEnter();
-        button = GetComponentInChildren<Button>();
-        button.onClick.AddListener(this.OnLoginBtnClick);//为按钮添加监听事件
+        startBtn.onClick.AddListener(this.OnLoginBtnClick);//为按钮添加监听事件
+    }
+
+    public override void OnPause()
+    {
+        base.OnPause();
+        startBtn.gameObject.transform.DOScale(Vector3.zero, tweenTime);
+    }
+
+    public override void OnResume()
+    {
+        base.OnResume();
+        startBtn.gameObject.transform.DOScale(Vector3.one, tweenTime);
     }
 
 
