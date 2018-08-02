@@ -18,8 +18,7 @@ public class MessagePanel : BasePanel {
 
     public void ShowMessage(string message)
     {
-        text.color = Color.white;
-        //text.color = new Vector4(255, 255, 255, 1);
+        text.CrossFadeAlpha(1,0.2f, false);
         text.text = message;
         text.enabled = true;
         Invoke("Hide", showTime);

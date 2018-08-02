@@ -707,6 +707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feb2f8c965a2bf498d72e842d856d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input_username: {fileID: 114008269119632388}
+  input_password: {fileID: 114681959999126264}
+  btn_close: {fileID: 114996106866776176}
+  btn_login: {fileID: 114054791116307868}
+  btn_register: {fileID: 114346917456918184}
 --- !u!114 &114654229615328002
 MonoBehaviour:
   m_ObjectHideFlags: 1

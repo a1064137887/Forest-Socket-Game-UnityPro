@@ -1342,6 +1342,22 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
   m_IsPrefabParent: 0
@@ -21050,21 +21066,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114366106243384032, guid: dd300cff5b4e1824391b11bdf49c58d7,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114366106243384032, guid: dd300cff5b4e1824391b11bdf49c58d7,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114366106243384032, guid: dd300cff5b4e1824391b11bdf49c58d7,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1153509482739804, guid: dd300cff5b4e1824391b11bdf49c58d7, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -25820,6 +25821,22 @@ Prefab:
     - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
       propertyPath: ShapeModule.randomDirection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
       propertyPath: ShapeModule.radiusThickness
@@ -60364,6 +60381,22 @@ Prefab:
     - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
       propertyPath: ShapeModule.arc.value
       value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: d0d47ed1e1db28f4bb7317fde9fd181e, type: 2}
       propertyPath: ShapeModule.radiusThickness

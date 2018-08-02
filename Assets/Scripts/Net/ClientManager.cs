@@ -62,9 +62,9 @@ public class ClientManager : BaseManager  {
         }
     }
 
-    private void OnProcessDataCallBack(RequestCode requestCode,string data)
+    private void OnProcessDataCallBack(ActionCode actionCode,string data)
     {
-        facade.HandleResponse(requestCode, data);
+        facade.HandleResponse(actionCode, data);
     }
 
     public void SendRequest(RequestCode requestCode,ActionCode actionCode,string data)

@@ -6,10 +6,11 @@ using Common;
 //请求基类，所有的Request都要放到requestManager中的字典统一管理
 public class BaseRequest : MonoBehaviour {
 
-    private RequestCode requestCode = RequestCode.None;
+    protected RequestCode requestCode = RequestCode.None;
+    protected ActionCode actionCode = ActionCode.None;
 
 	public virtual void Awake () {
-        GameFacade.instance.AddRequest(requestCode, this);
+        GameFacade.instance.AddRequest(actionCode, this);
 	}
 
     public virtual void SendRequest()
@@ -24,7 +25,7 @@ public class BaseRequest : MonoBehaviour {
 
     public virtual void OnDestroy()
     {
-        GameFacade.instance.RemoveRequest(requestCode);
+        GameFacade.instance.RemoveRequest(actionCode);
     }
 	
 }
