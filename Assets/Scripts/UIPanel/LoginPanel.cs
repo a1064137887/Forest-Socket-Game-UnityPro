@@ -58,10 +58,11 @@ public class LoginPanel : BasePanel {
         if(returnCode == ReturnCode.Success)
         {
             //TODO
+            uiManager.ShowMessageSync("登录成功");
         }
         else if(returnCode == ReturnCode.Fail)
         {
-            uiManager.ShowMessage("用户名或密码错误");
+            uiManager.ShowMessageSync("用户名或密码错误");
         }
     }
 

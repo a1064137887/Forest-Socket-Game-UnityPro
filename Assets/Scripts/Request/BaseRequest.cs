@@ -36,6 +36,7 @@ public class BaseRequest : MonoBehaviour {
 
     protected void SendRequest(string data)
     {
+        //利用facade作为中介发送，requestCode和actionCode在每个继承类中已经赋值
         facade.SendRequest(requestCode, actionCode, data);
     }
 	

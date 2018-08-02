@@ -68,6 +68,13 @@ public class Message  {
     //    return dataAmountBytes.Concat(requestCodeBytes).ToArray<byte>().Concat(dataBytes).ToArray<byte>();
     //}
 
+    /// <summary>
+    /// 打包从客户端往服务器发送的数据
+    /// </summary>
+    /// <param name="requestCode">请求</param>
+    /// <param name="actionCode">处理</param>
+    /// <param name="data">数据</param>
+    /// <returns></returns>
     public static byte[] PackData(RequestCode requestCode,ActionCode actionCode,string data)
     {
         byte[] requestCodeBytes = BitConverter.GetBytes((int)requestCode);

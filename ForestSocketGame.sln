@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestSocketGame", "ForestSocketGame.csproj", "{352335F3-3E75-908E-B1F4-3FE7B8B26800}"
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestSocketGame.CSharp", "ForestSocketGame.CSharp.csproj", "{5C064E99-AA34-EDDB-61CD-D7C69074FDF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestSocketGame.Editor", "ForestSocketGame.Editor.csproj", "{E951EE24-EBBF-C709-9740-F72565F7EF13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestSocketGame.CSharp.Editor", "ForestSocketGame.CSharp.Editor.csproj", "{12051E9E-BFEB-D38F-4AB7-87BC9A6D9B9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{352335F3-3E75-908E-B1F4-3FE7B8B26800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{352335F3-3E75-908E-B1F4-3FE7B8B26800}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{352335F3-3E75-908E-B1F4-3FE7B8B26800}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{352335F3-3E75-908E-B1F4-3FE7B8B26800}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E951EE24-EBBF-C709-9740-F72565F7EF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E951EE24-EBBF-C709-9740-F72565F7EF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E951EE24-EBBF-C709-9740-F72565F7EF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E951EE24-EBBF-C709-9740-F72565F7EF13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C064E99-AA34-EDDB-61CD-D7C69074FDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C064E99-AA34-EDDB-61CD-D7C69074FDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C064E99-AA34-EDDB-61CD-D7C69074FDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C064E99-AA34-EDDB-61CD-D7C69074FDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12051E9E-BFEB-D38F-4AB7-87BC9A6D9B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12051E9E-BFEB-D38F-4AB7-87BC9A6D9B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12051E9E-BFEB-D38F-4AB7-87BC9A6D9B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12051E9E-BFEB-D38F-4AB7-87BC9A6D9B9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
