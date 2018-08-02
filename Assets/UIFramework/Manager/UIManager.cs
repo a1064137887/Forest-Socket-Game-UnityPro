@@ -162,6 +162,16 @@ public class UIManager : BaseManager {
         messagePanel.ShowMessage(message);
     }
 
+    public void ShowMessageSync(string message)
+    {
+        if (messagePanel == null)
+        {
+            Debug.LogWarning("messagePanel为空");
+            return;
+        }
+        messagePanel.ShowMessageSync(message);
+    }
+
     /// <summary>
     /// just for test
     /// </summary>

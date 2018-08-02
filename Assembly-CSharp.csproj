@@ -99,6 +99,7 @@
      <Compile Include="Assets\Scripts\Net\ClientManager.cs" />
      <Compile Include="Assets\Scripts\Net\Message.cs" />
      <Compile Include="Assets\Scripts\Request\BaseRequest.cs" />
+     <Compile Include="Assets\Scripts\Request\LoginRequest.cs" />
      <Compile Include="Assets\Scripts\UIPanel\BasePanel.cs" />
      <Compile Include="Assets\Scripts\UIPanel\LoginPanel.cs" />
      <Compile Include="Assets\Scripts\UIPanel\MessagePanel.cs" />

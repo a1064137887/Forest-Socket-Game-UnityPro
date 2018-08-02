@@ -23,6 +23,7 @@ public class ClientManager : BaseManager  {
         {
             clientSocket.Connect(IP, PORT);
             Start();
+            Debug.Log("连接服务器 IP : "+IP+" PORT : " + PORT);
         }
         catch(Exception ex)
         {
@@ -71,6 +72,7 @@ public class ClientManager : BaseManager  {
     {
         byte[] bytes = Message.PackData(requestCode, actionCode, data);
         clientSocket.Send(bytes);
+        Debug.Log("=====向服务器发送数据=====");
     }
 
 }

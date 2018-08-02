@@ -8,9 +8,15 @@ public class BaseRequest : MonoBehaviour {
 
     protected RequestCode requestCode = RequestCode.None;
     protected ActionCode actionCode = ActionCode.None;
+    protected GameFacade facade;
+    public void SetFacade(GameFacade facade)
+    {
+        this.facade = facade;
+    }
 
 	public virtual void Awake () {
         GameFacade.instance.AddRequest(actionCode, this);
+        facade = GameFacade.instance;
 	}
 
     public virtual void SendRequest()
@@ -26,6 +32,11 @@ public class BaseRequest : MonoBehaviour {
     public virtual void OnDestroy()
     {
         GameFacade.instance.RemoveRequest(actionCode);
+    }
+
+    protected void SendRequest(string data)
+    {
+        facade.SendRequest(requestCode, actionCode, data);
     }
 	
 }

@@ -90,4 +90,9 @@ public class GameFacade : MonoBehaviour {
         uiManager.ShowMessage(message);
     }
 
+    public void SendRequest(RequestCode requestCode, ActionCode actionCode, string data)
+    {
+        clientManager.SendRequest(requestCode, actionCode, data);
+    }
+
 }

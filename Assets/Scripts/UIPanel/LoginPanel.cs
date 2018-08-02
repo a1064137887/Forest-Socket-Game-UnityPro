@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using Common;
 
 public class LoginPanel : BasePanel {
 
@@ -13,16 +14,17 @@ public class LoginPanel : BasePanel {
     public Button btn_register;
 
     private float tweenTime = 0.3f;
+    private LoginRequest loginRequest;
 
     public override void OnEnter()
     {
         base.OnEnter();
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, tweenTime);
-        //btn_close = transform.Find("btn_close").GetComponent<Button>();
         btn_close.onClick.AddListener(OnBtnCloseClick);
         btn_login.onClick.AddListener(OnBtnLoginClick);
         btn_register.onClick.AddListener(OnBtnRegisterClick);
+        loginRequest = GetComponent<LoginRequest>();
     }
 
     private void OnBtnCloseClick()
@@ -42,11 +44,25 @@ public class LoginPanel : BasePanel {
             uiManager.ShowMessage(tip);
             return;
         }
+
+        loginRequest.SendRequest(input_username.text, input_password.text);
     }
 
     private void OnBtnRegisterClick()
     {
 
+    }
+
+    public void OnLoginResponse(ReturnCode returnCode)
+    {
+        if(returnCode == ReturnCode.Success)
+        {
+            //TODO
+        }
+        else if(returnCode == ReturnCode.Fail)
+        {
+            uiManager.ShowMessage("用户名或密码错误");
+        }
     }
 
 }
