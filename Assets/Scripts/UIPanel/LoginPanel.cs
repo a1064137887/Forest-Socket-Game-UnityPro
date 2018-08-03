@@ -16,15 +16,27 @@ public class LoginPanel : BasePanel {
     private float tweenTime = 0.3f;
     private LoginRequest loginRequest;
 
-    public override void OnEnter()
+    private void Start()
     {
-        base.OnEnter();
-        transform.localScale = Vector3.zero;
-        transform.DOScale(Vector3.one, tweenTime);
         btn_close.onClick.AddListener(OnBtnCloseClick);
         btn_login.onClick.AddListener(OnBtnLoginClick);
         btn_register.onClick.AddListener(OnBtnRegisterClick);
         loginRequest = GetComponent<LoginRequest>();
+
+    }
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+        gameObject.SetActive(true);
+        transform.localScale = Vector3.zero;
+        transform.DOScale(Vector3.one, tweenTime);
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        gameObject.SetActive(false);
     }
 
     private void OnBtnCloseClick()
@@ -50,7 +62,7 @@ public class LoginPanel : BasePanel {
 
     private void OnBtnRegisterClick()
     {
-
+        uiManager.PushPanel(UIPanelType.Register);
     }
 
     public void OnLoginResponse(ReturnCode returnCode)

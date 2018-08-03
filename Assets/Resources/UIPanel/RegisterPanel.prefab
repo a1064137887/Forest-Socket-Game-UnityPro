@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 222781271972329328}
   - component: {fileID: 114562353191796778}
   - component: {fileID: 114098655584031806}
+  - component: {fileID: 114828224948472622}
   m_Layer: 5
   m_Name: RegisterPanel
   m_TagString: Untagged
@@ -283,7 +284,7 @@ GameObject:
   - component: {fileID: 114030980960583100}
   - component: {fileID: 114115883367263430}
   m_Layer: 5
-  m_Name: input_password
+  m_Name: input_password_re
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,6 +394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62abc84eec7e50d4fb3b6316943b5628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input_username: {fileID: 114219878029901716}
+  input_password: {fileID: 114890657207640862}
+  input_password_re: {fileID: 114115883367263430}
+  btn_register: {fileID: 114501814788253926}
+  btn_close: {fileID: 114856231780904850}
 --- !u!114 &114115883367263430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -839,6 +845,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u5E10\u6237"
+--- !u!114 &114828224948472622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344827660717022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9e166c1045951448e607046b733e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114831319110462362
 MonoBehaviour:
   m_ObjectHideFlags: 1
