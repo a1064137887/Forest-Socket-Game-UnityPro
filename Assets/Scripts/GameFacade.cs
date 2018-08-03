@@ -78,7 +78,6 @@ public class GameFacade : MonoBehaviour {
     {
         requestManager.RemoveRequest(actionCode);
     }
-    //========================================
 
     public void HandleResponse(ActionCode actionCode, string data)
     {
@@ -94,5 +93,18 @@ public class GameFacade : MonoBehaviour {
     {
         clientManager.SendRequest(requestCode, actionCode, data);
     }
+
+
+    //使用中介的方法调用 AudioManager 管理播放音乐
+    public void PlaySound(string soundName)
+    {
+        audioManager.PlaySound(soundName);
+    }
+
+    public void PlayBGSound(string soundName)
+    {
+        audioManager.PlayBGSound(soundName);
+    }
+
 
 }

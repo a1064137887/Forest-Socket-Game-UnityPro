@@ -8,6 +8,13 @@ public class BasePanel : MonoBehaviour {
         set { _uiManager = value; }
         get { return _uiManager; }
     }
+
+    protected GameFacade _facade;
+    public GameFacade facade
+    {
+        set { _facade = value; }
+        get { return _facade; }
+    }
     /// <summary>
     /// 界面被显示出来
     /// </summary>

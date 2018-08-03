@@ -42,11 +42,13 @@ public class StartPanel : BasePanel {
 
     private void OnLoginBtnClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         uiManager.PushPanel(UIPanelType.Login);
     }
 
     private void OnExitBtnClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         Debug.Log("===== 退出游戏 =====");
     }
 

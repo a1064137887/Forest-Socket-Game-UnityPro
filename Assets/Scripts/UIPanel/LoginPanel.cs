@@ -22,7 +22,7 @@ public class LoginPanel : BasePanel {
         btn_login.onClick.AddListener(OnBtnLoginClick);
         btn_register.onClick.AddListener(OnBtnRegisterClick);
         loginRequest = GetComponent<LoginRequest>();
-
+        
     }
 
     public override void OnEnter()
@@ -41,11 +41,13 @@ public class LoginPanel : BasePanel {
 
     private void OnBtnCloseClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         transform.DOScale(Vector3.zero, tweenTime).OnComplete(() => { uiManager.PopPanel(); });
     }
 
     private void OnBtnLoginClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         string tip = "";
         if (string.IsNullOrEmpty(input_username.text))
             tip += " 用户名为空 ";
@@ -62,6 +64,7 @@ public class LoginPanel : BasePanel {
 
     private void OnBtnRegisterClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         uiManager.PushPanel(UIPanelType.Register);
     }
 

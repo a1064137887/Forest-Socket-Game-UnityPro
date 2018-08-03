@@ -42,11 +42,13 @@ public class RegisterPanel : BasePanel {
 
     private void OnBtnCloseClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         transform.DOScale(Vector3.zero, tweenTime).OnComplete(() => { uiManager.PopPanel(); });
     }
 
     private void OnBtnRegisterClick()
     {
+        facade.PlaySound(AudioManager.sound_ButtonClick);
         string tip = "";
         if (string.IsNullOrEmpty(input_username.text))
             tip += "用户名不能为空";
