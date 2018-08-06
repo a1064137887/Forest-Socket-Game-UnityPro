@@ -33,6 +33,12 @@ public class LoginPanel : BasePanel {
         transform.DOScale(Vector3.one, tweenTime);
     }
 
+    public override void OnPause()
+    {
+        base.OnPause();
+        transform.DOScale(Vector3.zero, tweenTime).OnComplete(() => { gameObject.SetActive(false); });
+    }
+
     public override void OnExit()
     {
         base.OnExit();
@@ -72,8 +78,8 @@ public class LoginPanel : BasePanel {
     {
         if(returnCode == ReturnCode.Success)
         {
-            //TODO
             uiManager.ShowMessageSync("登录成功");
+            uiManager.PushPanelSync(UIPanelType.RoomList);
         }
         else if(returnCode == ReturnCode.Fail)
         {

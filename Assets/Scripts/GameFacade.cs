@@ -34,8 +34,13 @@ public class GameFacade : MonoBehaviour {
 	}
 	
 	void Update () {
-		 
+        UpdateManager();
 	}
+
+    void OnDestroy()
+    {
+        DestroyManager();
+    }
 
     private void InitManager()
     {
@@ -64,9 +69,14 @@ public class GameFacade : MonoBehaviour {
         clientManager.OnDestroy();
     }
 
-    private void OnDestroy()
+    private void UpdateManager()
     {
-        DestroyManager();
+        uiManager.Update();
+        audioManager.Update();
+        cameraManager.Update();
+        requestManager.Update();
+        playerManager.Update();
+        clientManager.Update();
     }
 
     //使用中介的方法 ，调用RequestManager类中的方法，管理Request

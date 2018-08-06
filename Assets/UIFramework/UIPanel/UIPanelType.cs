@@ -4,8 +4,10 @@ using System;
 
 
 public enum UIPanelType  {
+    None,
     Message,
     Start,
     Login,
     Register,
+    RoomList,
 }

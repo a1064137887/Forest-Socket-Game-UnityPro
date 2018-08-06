@@ -11,6 +11,9 @@
 			"path":"UIPanel/LoginPanel"},
 
 			{"panelTypeString":"Register",
-			"path":"UIPanel/RegisterPanel"}
+			"path":"UIPanel/RegisterPanel"},
+
+			{"panelTypeString":"RoomList",
+			"path":"UIPanel/RoomListPanel"}
 		]
 }

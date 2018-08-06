@@ -358,6 +358,7 @@
     <Compile Include="Assets\Scripts\Managers\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\RequestManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Net\ClientManager.cs" />
     <Compile Include="Assets\Scripts\Net\Message.cs" />
     <Compile Include="Assets\Scripts\Request\BaseRequest.cs" />
@@ -367,10 +368,10 @@
     <Compile Include="Assets\Scripts\UIPanel\LoginPanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel\MessagePanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel\RegisterPanel.cs" />
+    <Compile Include="Assets\Scripts\UIPanel\RoomListPanel.cs" />
     <Compile Include="Assets\Scripts\UIPanel\StartPanel.cs" />
     <Compile Include="Assets\UIFramework\Extension\DictionaryExtension.cs" />
     <Compile Include="Assets\UIFramework\Manager\GameRoot.cs" />
-    <Compile Include="Assets\UIFramework\Manager\UIManager.cs" />
     <Compile Include="Assets\UIFramework\UIPanel\UIPanelInfo.cs" />
     <Compile Include="Assets\UIFramework\UIPanel\UIPanelType.cs" />
   </ItemGroup>
