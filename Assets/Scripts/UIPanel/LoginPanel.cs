@@ -31,6 +31,8 @@ public class LoginPanel : BasePanel {
         gameObject.SetActive(true);
         transform.localScale = Vector3.zero;
         transform.DOScale(Vector3.one, tweenTime);
+        input_username.text = "";
+        input_password.text = "";
     }
 
     public override void OnPause()
@@ -39,10 +41,19 @@ public class LoginPanel : BasePanel {
         transform.DOScale(Vector3.zero, tweenTime).OnComplete(() => { gameObject.SetActive(false); });
     }
 
+    public override void OnResume()
+    {
+        base.OnResume();
+        gameObject.SetActive(true);
+        transform.localScale = Vector3.zero;
+        transform.DOScale(Vector3.one, tweenTime);
+    }
+
     public override void OnExit()
     {
         base.OnExit();
         gameObject.SetActive(false);
+
     }
 
     private void OnBtnCloseClick()

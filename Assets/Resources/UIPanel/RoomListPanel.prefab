@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 222344349493496332}
   - component: {fileID: 114911386600646208}
   m_Layer: 5
-  m_Name: wincount
+  m_Name: lb_wincount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 222194772872229900}
   - component: {fileID: 114124481086684150}
   m_Layer: 5
-  m_Name: totalcount
+  m_Name: lb_totalcount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,6 +1105,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn_close: {fileID: 114688909554997604}
+  lb_username: {fileID: 114262256337396612}
+  lb_totalcount: {fileID: 114124481086684150}
+  lb_wincount: {fileID: 114911386600646208}
 --- !u!114 &114238605506510360
 MonoBehaviour:
   m_ObjectHideFlags: 1

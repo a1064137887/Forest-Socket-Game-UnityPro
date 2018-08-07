@@ -116,5 +116,14 @@ public class GameFacade : MonoBehaviour {
         audioManager.PlayBGSound(soundName);
     }
 
+    public void SetUserData(UserData userData)
+    {
+        playerManager.userData = userData;
+    }
+
+    public UserData GetUserData()
+    {
+        return playerManager.userData;
+    }
 
 }
